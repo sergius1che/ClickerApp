@@ -22,7 +22,56 @@ namespace ClickerHost
 
             var stream = _tcpClient.GetStream();
 
-            string httpRequest = "";
+            string httpRequest = GetRequest(stream);
+
+            if (string.IsNullOrEmpty(httpRequest))
+            {
+                Console.WriteLine(httpRequest);
+
+                int? keycode = GetKeyCode(httpRequest);
+                string responce = "error";
+
+                string httpResponse = "HTTP/1.1 200 OK\nAccess-Control-Allow-Origin:*\nContent-type: text/html\nContent-Length:" + responce.Length.ToString() + "\n\n" + responce;
+                byte[] buffer = Encoding.ASCII.GetBytes(httpResponse);
+                stream.Write(buffer, 0, buffer.Length);
+                Console.WriteLine("Client send: " + responce);
+                _tcpClient.Close();
+            }
+        }
+
+        private int? GetKeyCode(string httpRequest)
+        {
+            if (string.IsNullOrEmpty(httpRequest))
+                return null;
+
+            var getIndex = httpRequest.IndexOf("GET");
+
+            if (getIndex == -1)
+                return null;
+
+            var varName = "/?key=";
+            var varNameIndex = httpRequest.IndexOf(varName, getIndex);
+
+            if (varNameIndex == -1)
+                return null;
+
+            var start = varNameIndex + varName.Length;
+            var length = httpRequest.IndexOf(' ', start) - start;
+
+            var key = httpRequest.Substring(start, length);
+
+            if (int.TryParse(key, out int keyCode))
+            {
+                Console.WriteLine("KeyCode send: " + keyCode);
+                return keyCode;
+            }
+
+            return null;
+        }
+
+        private string GetRequest(NetworkStream stream)
+        {
+            string httpRequest = string.Empty;
             byte[] Buffer = new byte[1024];
             int Count;
             while ((Count = stream.Read(Buffer, 0, Buffer.Length)) > 0)
@@ -34,47 +83,7 @@ namespace ClickerHost
                 }
             }
 
-            Console.WriteLine(httpRequest);
-
-            string responce = RequestProcess(httpRequest);
-
-            string httpResponse = "HTTP/1.1 200 OK\nAccess-Control-Allow-Origin:*\nContent-type: text/html\nContent-Length:" + responce.Length.ToString() + "\n\n" + responce;
-            byte[] buffer = Encoding.ASCII.GetBytes(httpResponse);
-            stream.Write(buffer, 0, buffer.Length);
-            Console.WriteLine("Client send: " + responce);
-            _tcpClient.Close();
-        }
-
-        private string RequestProcess(string httpRequest)
-        {
-            string responce = "error";
-
-            if (string.IsNullOrEmpty(httpRequest))
-                return responce;
-
-            var getIndex = httpRequest.IndexOf("GET");
-
-            if (getIndex == -1)
-                return responce;
-
-            var varName = "/?key=";
-            var varNameIndex = httpRequest.IndexOf(varName, getIndex);
-
-            if (varNameIndex == -1)
-                return responce;
-
-            var start = varNameIndex + varName.Length;
-            var length = httpRequest.IndexOf(' ', start) - start;
-
-            var key = httpRequest.Substring(start, length);
-
-            if (int.TryParse(key, out int keyCode))
-            {
-                Console.WriteLine("KeyCode send: " + keyCode);
-                responce = "success";
-            }
-
-            return responce;
+            return httpRequest;
         }
     }
 }
