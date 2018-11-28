@@ -132,306 +132,327 @@ namespace ClickerHost
         Ins_key = 0x2D,
 
         ///<summary>DELETE</summary>
-0x2E
-DEL key
-///<summary>HELP</summary>
-0x2F
-HELP key
+        Del_key = 0x2E,
 
-0x30
-0 key
-0x31
-1 key
-0x32
-2 key
-0x33
-3 key
-0x34
-4 key
-0x35
-5 key
-0x36
-6 key
-0x37
-7 key
-0x38
-8 key
-0x39
-9 key
--
-0x3A-40
-Undefined
-0x41
-A key
-0x42
-B key
-0x43
-C key
-0x44
-D key
-0x45
-E key
-0x46
-F key
-0x47
-G key
-0x48
-H key
-0x49
-I key
-0x4A
-J key
-0x4B
-K key
-0x4C
-L key
-0x4D
-M key
-0x4E
-N key
-0x4F
-O key
-0x50
-P key
-0x51
-Q key
-0x52
-R key
-0x53
-S key
-0x54
-T key
-0x55
-U key
-0x56
-V key
-0x57
-W key
-0x58
-X key
-0x59
-Y key
-0x5A
-Z key
-///<summary>LWIN
-0x5B
-Left Windows key (Natural keyboard) 
-///<summary>RWIN
-0x5C
-Right Windows key (Natural keyboard)
-///<summary>APPS
-0x5D
-Applications key (Natural keyboard)
--
-0x5E
-Reserved
-///<summary>SLEEP
-0x5F
-Computer Sleep key
-///<summary>NUMPAD0
-0x60
-Numeric keypad 0 key
-///<summary>NUMPAD1
-0x61
-Numeric keypad 1 key
-///<summary>NUMPAD2
-0x62
-Numeric keypad 2 key
-///<summary>NUMPAD3
-0x63
-Numeric keypad 3 key
-///<summary>NUMPAD4
-0x64
-Numeric keypad 4 key
-///<summary>NUMPAD5
-0x65
-Numeric keypad 5 key
-///<summary>NUMPAD6
-0x66
-Numeric keypad 6 key
-///<summary>NUMPAD7
-0x67
-Numeric keypad 7 key
-///<summary>NUMPAD8
-0x68
-Numeric keypad 8 key
-///<summary>NUMPAD9
-0x69
-Numeric keypad 9 key
-///<summary>MULTIPLY
-0x6A
-Multiply key
-///<summary>ADD
-0x6B
-Add key
-///<summary>SEPARATOR
-0x6C
-Separator key
-///<summary>SUBTRACT
-0x6D
-Subtract key
-///<summary>DECIMAL
-0x6E
-Decimal key
-///<summary>DIVIDE
-0x6F
-Divide key
-///<summary>F1
-0x70
-F1 key
-///<summary>F2
-0x71
-F2 key
-///<summary>F3
-0x72
-F3 key
-///<summary>F4
-0x73
-F4 key
-///<summary>F5
-0x74
-F5 key
-///<summary>F6
-0x75
-F6 key
-///<summary>F7
-0x76
-F7 key
-///<summary>F8
-0x77
-F8 key
-///<summary>F9
-0x78
-F9 key
-///<summary>F10
-0x79
-F10 key
-///<summary>F11
-0x7A
-F11 key
-///<summary>F12
-0x7B
-F12 key
-///<summary>F13
-0x7C
-F13 key
-///<summary>F14
-0x7D
-F14 key
-///<summary>F15
-0x7E
-F15 key
-///<summary>F16
-0x7F
-F16 key
-///<summary>F17
-0x80
-F17 key
-///<summary>F18
-0x81
-F18 key
-///<summary>F19
-0x82
-F19 key
-///<summary>F20
-0x83
-F20 key
-///<summary>F21
-0x84
-F21 key
-///<summary>F22
-0x85
-F22 key
-///<summary>F23
-0x86
-F23 key
-///<summary>F24
-0x87
-F24 key
--
-0x88-8F
-Unassigned
-///<summary>NUMLOCK
-0x90
-NUM LOCK key
-///<summary>SCROLL
-0x91
-SCROLL LOCK key
-0x92-96
-OEM specific
--
-0x97-9F
-Unassigned
-///<summary>LSHIFT
-0xA0
-Left SHIFT key
-///<summary>RSHIFT
-0xA1
-Right SHIFT key
-///<summary>LCONTROL
-0xA2
-Left CONTROL key
-///<summary>RCONTROL
-0xA3
-Right CONTROL key
-///<summary>LMENU
-0xA4
-Left MENU key
-///<summary>RMENU
-0xA5
-Right MENU key
-///<summary>BROWSER_BACK
-0xA6
-Browser Back key
-///<summary>BROWSER_FORWARD
-0xA7
-Browser Forward key
-///<summary>BROWSER_REFRESH
-0xA8
-Browser Refresh key
-///<summary>BROWSER_STOP
-0xA9
-Browser Stop key
-///<summary>BROWSER_SEARCH
-0xAA
-Browser Search key
-///<summary>BROWSER_FAVORITES
-0xAB
-Browser Favorites key
-///<summary>BROWSER_HOME
-0xAC
-Browser Start and Home key
-///<summary>VOLUME_MUTE
+        ///<summary>HELP</summary>
+        Help_key = 0x2F,
+
+        ///<summary>0 key</summary>
+        Key_0 = 0x30,
+
+        ///<summary>1 key</summary>
+        Key_1 = 0x31,
+
+        ///<summary>2 key</summary>
+        Key_2 = 0x32,
+
+        ///<summary>3 key</summary>
+        Key_3 = 0x33,
+
+        ///<summary>4 key</summary>
+        Key_4 = 0x34,
+
+        ///<summary>5 key</summary>
+        Key_5 = 0x35,
+
+        ///<summary>6 key</summary>
+        Key_6 = 0x36,
+
+        ///<summary>7 key</summary>
+        Key_7 = 0x37,
+
+        ///<summary>8 key</summary>
+        Key_8 = 0x38,
+
+        ///<summary>9 key</summary>
+        Key_9 = 0x39,
+
+        ///<summary>A key</summary>
+        A_key = 0x41,
+
+        ///<summary>B key</summary>
+        B_key = 0x42,
+
+        ///<summary>C key</summary>
+        C_key = 0x43,
+
+        ///<summary>D key</summary>
+        D_key = 0x44,
+
+        ///<summary>E key</summary>
+        E_key = 0x45,
+
+        ///<summary>F key</summary>
+        F_key = 0x46,
+
+        ///<summary>G key</summary>
+        G_key = 0x47,
+
+        ///<summary>H key</summary>
+        H_key = 0x48,
+
+        ///<summary>I key</summary>
+        I_key = 0x49,
+
+        ///<summary>J key</summary>
+        J_key = 0x4A,
+
+        ///<summary>K key</summary>
+        K_key = 0x4B,
+
+        ///<summary>L key</summary>
+        L_key = 0x4C,
+
+        ///<summary>M key</summary>
+        M_key = 0x4D,
+
+        ///<summary>N key</summary>
+        N_key = 0x4E,
+
+        ///<summary>O key</summary>
+        O_key = 0x4F,
+
+        ///<summary>P key</summary>
+        P_key = 0x50,
+
+        ///<summary>Q key</summary>
+        Q_key = 0x51,
+
+        ///<summary>R key</summary>
+        R_key = 0x52,
+
+        ///<summary>S key</summary>
+        S_key = 0x53,
+
+        ///<summary>T key</summary>
+        T_key = 0x54,
+
+        ///<summary>U key</summary>
+        U_key = 0x55,
+
+        ///<summary>V key</summary>
+        V_key = 0x56,
+
+        ///<summary>W key</summary>
+        W_key = 0x57,
+
+        ///<summary>X key</summary>
+        X_key = 0x58,
+
+        ///<summary>Y key</summary>
+        Y_key = 0x59,
+
+        ///<summary>Z key</summary>
+        Z_key = 0x5A,
+
+        ///<summary>Left WIN key</summary>
+        LWin = 0x5B,
+
+        ///<summary>Right WIN key</summary>
+        RWin = 0x5C,
+
+        ///<summary>Applications key (Natural keyboard)</summary>
+        Apps = 0x5D,
+
+        ///<summary>Computer Sleep key</summary>
+        Sleep = 0x5F,
+
+        ///<summary>NUMPAD0</summary>
+        NumPad_0_key = 0x60,
+
+        ///<summary>NUMPAD1</summary>
+        NumPad_1_key = 0x61,
+
+        ///<summary>NUMPAD2</summary>
+        NumPad_2_key = 0x62,
+
+        ///<summary>NUMPAD3</summary>
+        NumPad_3_key = 0x63,
+
+        ///<summary>NUMPAD4</summary>
+        NumPad_4_key = 0x64,
+
+        ///<summary>NUMPAD5</summary>
+        NumPad_5_key = 0x65,
+
+        ///<summary>NUMPAD6</summary>
+        NumPad_6_key = 0x66,
+
+        ///<summary>NUMPAD6</summary>
+        NumPad_7_key = 0x67,
+
+        ///<summary>NUMPAD8</summary>
+        NumPad_8_key = 0x68D,
+
+        ///<summary>NUMPAD9</summary>
+        NumPad_9_key = 0x69,
+
+        ///<summary>MULTIPLY</summary>
+        Multiply_key = 0x6A,
+
+        ///<summary>ADD Add key</summary>
+        Add_key = 0x6B,
+
+        ///<summary>SEPARATOR</summary>
+        Separator_key = 0x6C,
+
+        ///<summary>SUBTRACT</summary>
+        Subtract_key = 0x6D,
+
+        ///<summary>DECIMAL</summary>
+        Decimal_key = 0x6E,
+
+        ///<summary>DIVIDE</summary>
+        Divide_key = 0x6F,
+
+        ///<summary>F1</summary>
+        F1_key = 0x70,
+
+        ///<summary>F2</summary>
+        F2_key = 0x71,
+
+        ///<summary>F3</summary>
+        F3_key = 0x72,
+
+        ///<summary>F4</summary>
+        F4_key = 0x73,
+
+        ///<summary>F5</summary>
+        F5_key = 0x74,
+
+        ///<summary>F6</summary>
+        F6_key = 0x75,
+
+        ///<summary>F7</summary>
+        F7_key = 0x76,
+
+        ///<summary>F8</summary>
+        F8_key = 0x77,
+
+        ///<summary>F9</summary>
+        F9_key = 0x78,
+
+        ///<summary>F10</summary>
+        F10_key = 0x79,
+
+        ///<summary>F11</summary>
+        F11_key = 0x7A,
+
+        ///<summary>F12</summary>
+        F12_key = 0x7B,
+
+        ///<summary>F13</summary>
+        F13_key = 0x7C,
+
+        ///<summary>F14</summary>
+        F14_key = 0x7D,
+
+        ///<summary>F15</summary>
+        F15_key = 0x7E,
+
+        ///<summary>F16</summary>
+        F16_key = 0x7F,
+
+        ///<summary>F17</summary>
+        F17_key = 0x80,
+
+        ///<summary>F18</summary>
+        F18_key = 0x81,
+
+        ///<summary>F19</summary>
+        F19_key = 0x82,
+
+        ///<summary>F20</summary>
+        F20_key = 0x83,
+
+        ///<summary>F21</summary>
+        F21_key = 0x84,
+
+        ///<summary>F22</summary>
+        F22_key = 0x85,
+
+        ///<summary>F23</summary>
+        F23_key = 0x86,
+
+        ///<summary>F24</summary>
+        F24_key = 0x87,
+
+        ///<summary>NUMLOCK</summary>
+        NUM_LOCK_key = 0x90,
+
+        ///<summary>SCROLL</summary>
+        Scroll_LOCK_key = 0x91,
+
+        ///<summary>LSHIFT</summary>
+        Left_SHIFT_key = 0xA0,
+
+        ///<summary>RSHIFT</summary>
+        Right_SHIFT_key = 0xA1,
+
+        ///<summary>LCONTROL</summary>
+        Left_CONTROL_key = 0xA2,
+
+        ///<summary>RCONTROL</summary>
+        Right_CONTROL_key = 0xA3,
+
+        ///<summary>LMENU</summary>
+        Left_MENU_key = 0xA4,
+
+        ///<summary>RMENU</summary>
+        Right_MENU_key = 0xA5,
+
+        ///<summary>BROWSER_BACK</summary>
+        Browser_Back_key = 0xA6,
+
+        ///<summary>BROWSER_FORWARD</summary>
+        Browser_Forward_key = 0xA7,
+
+        ///<summary>BROWSER_REFRESH</summary>
+        Browser_R_Refresh_key = 0xA8,
+
+        ///<summary>BROWSER_STOP</summary>
+        Browser_Stop_key = 0xA9,
+
+        ///<summary>BROWSER_SEARCH</summary>
+        Browser_Search_key = 0xAA,
+
+        ///<summary>BROWSER_FAVORITES</summary>
+        Browser_Favorites_key = 0xAB,
+
+        ///<summary>BROWSER_HOME</summary>
+        Browser_Start_and_Home_key = 0xAC,
+
+///<summary>VOLUME_MUTE</summary>
 0xAD
 Volume Mute key
-///<summary>VOLUME_DOWN
+///<summary>VOLUME_DOWN</summary>
 0xAE
 Volume Down key
-///<summary>VOLUME_UP
+///<summary>VOLUME_UP</summary>
 0xAF
 Volume Up key
-///<summary>MEDIA_NEXT_TRACK
+///<summary>MEDIA_NEXT_TRACK</summary>
 0xB0
 Next Track key
-///<summary>MEDIA_PREV_TRACK
+///<summary>MEDIA_PREV_TRACK</summary>
 0xB1
 Previous Track key
-///<summary>MEDIA_STOP
+///<summary>MEDIA_STOP</summary>
 0xB2
 Stop Media key
-///<summary>MEDIA_PLAY_PAUSE
+///<summary>MEDIA_PLAY_PAUSE</summary>
 0xB3
 Play/Pause Media key
-///<summary>LAUNCH_MAIL
+///<summary>LAUNCH_MAIL</summary>
 0xB4
 Start Mail key
-///<summary>LAUNCH_MEDIA_SELECT
+///<summary>LAUNCH_MEDIA_SELECT</summary>
 0xB5
 Select Media key
-///<summary>LAUNCH_APP1
+///<summary>LAUNCH_APP1</summary>
 0xB6
 Start Application 1 key
-///<summary>LAUNCH_APP2
+///<summary>LAUNCH_APP2</summary>
 0xB7
 Start Application 2 key
 -
