@@ -422,140 +422,110 @@ namespace ClickerHost
         ///<summary>BROWSER_HOME</summary>
         Browser_Start_and_Home_key = 0xAC,
 
-///<summary>VOLUME_MUTE</summary>
-0xAD
-Volume Mute key
-///<summary>VOLUME_DOWN</summary>
-0xAE
-Volume Down key
-///<summary>VOLUME_UP</summary>
-0xAF
-Volume Up key
-///<summary>MEDIA_NEXT_TRACK</summary>
-0xB0
-Next Track key
-///<summary>MEDIA_PREV_TRACK</summary>
-0xB1
-Previous Track key
-///<summary>MEDIA_STOP</summary>
-0xB2
-Stop Media key
-///<summary>MEDIA_PLAY_PAUSE</summary>
-0xB3
-Play/Pause Media key
-///<summary>LAUNCH_MAIL</summary>
-0xB4
-Start Mail key
-///<summary>LAUNCH_MEDIA_SELECT</summary>
-0xB5
-Select Media key
-///<summary>LAUNCH_APP1</summary>
-0xB6
-Start Application 1 key
-///<summary>LAUNCH_APP2</summary>
-0xB7
-Start Application 2 key
--
-0xB8-B9
-Reserved
-///<summary>OEM_1
-0xBA
-Used for miscellaneous characters; it can vary by keyboard.
-For the US standard keyboard, the ';:' key
-///<summary>OEM_PLUS
-0xBB
-For any country/region, the '+' key
-///<summary>OEM_COMMA
-0xBC
-For any country/region, the ',' key
-///<summary>OEM_MINUS
-0xBD
-For any country/region, the '-' key
-///<summary>OEM_PERIOD
-0xBE
-For any country/region, the '.' key
-///<summary>OEM_2
-0xBF
-Used for miscellaneous characters; it can vary by keyboard.
-For the US standard keyboard, the '/?' key
-///<summary>OEM_3
-0xC0
-Used for miscellaneous characters; it can vary by keyboard. 
-For the US standard keyboard, the '`~' key 
--
-0xC1-D7
-Reserved
--
-0xD8-DA
-Unassigned
-///<summary>OEM_4
-0xDB
-Used for miscellaneous characters; it can vary by keyboard. 
-For the US standard keyboard, the '[{' key
-///<summary>OEM_5
-0xDC
-Used for miscellaneous characters; it can vary by keyboard. 
-For the US standard keyboard, the '\|' key
-///<summary>OEM_6
-0xDD
-Used for miscellaneous characters; it can vary by keyboard. 
-For the US standard keyboard, the ']}' key
-///<summary>OEM_7
-0xDE
-Used for miscellaneous characters; it can vary by keyboard. 
-For the US standard keyboard, the 'single-quote/double-quote' key
-///<summary>OEM_8
-0xDF
-Used for miscellaneous characters; it can vary by keyboard.
--
-0xE0
-Reserved
-0xE1
-OEM specific
-///<summary>OEM_102
-0xE2
-Either the angle bracket key or the backslash key on the RT 102-key keyboard
-0xE3-E4
-OEM specific
-///<summary>PROCESSKEY
-0xE5
-IME PROCESS key
-0xE6
-OEM specific
-///<summary>PACKET
-0xE7
-Used to pass Unicode characters as if they were keystrokes. The ///<summary>PACKET key is the low word of a 32-bit Virtual Key value used for non-keyboard input methods. For more information, see Remark in KEYBDINPUT, SendInput, WM_KEYDOWN, and WM_KEYUP
--
-0xE8
-Unassigned
-0xE9-F5
-OEM specific
-///<summary>ATTN
-0xF6
-Attn key
-///<summary>CRSEL
-0xF7
-CrSel key
-///<summary>EXSEL
-0xF8
-ExSel key
-///<summary>EREOF
-0xF9
-Erase EOF key
-///<summary>PLAY
-0xFA
-Play key
-///<summary>ZOOM
-0xFB
-Zoom key
-///<summary>NONAME
-0xFC
-Reserved
-///<summary>PA1
-0xFD
-PA1 key
-///<summary>OEM_CLEAR
-0xFE
-Clear key
+        ///<summary>VOLUME_MUTE</summary>
+        Volume_Mute_key = 0xAD,
+
+        ///<summary>VOLUME_DOWN</summary>
+        Volume_Down_key = 0xAE,
+
+        ///<summary>VOLUME_UP</summary>
+        Volume_Up_key = 0xAF,
+
+        ///<summary>MEDIA_NEXT_TRACK</summary>
+        Next_Track_key = 0xB0,
+
+        ///<summary>MEDIA_PREV_TRACK</summary>
+        Previous_Track_key = 0xB1,
+
+        ///<summary>MEDIA_STOP</summary>
+        Stop_Media_key = 0xB2,
+
+        ///<summary>MEDIA_PLAY_PAUSE</summary>
+        Play_Pause_Media_key = 0xB3,
+
+        ///<summary>LAUNCH_MAIL</summary>
+        Start_Mail_key = 0xB4,
+
+        ///<summary>LAUNCH_MEDIA_SELECT</summary>
+        Select_Media_key = 0xB5,
+
+        ///<summary>Start Application 1 key</summary>
+        LAUNCH_APP1 = 0xB6,
+
+        ///<summary>Start Application 2 key</summary>
+        LAUNCH_APP2 = 0xB7,
+
+        ///<summary>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the ';:' key</summary>
+        OEM_1 = 0xBA,
+
+        ///<summary>For any country/region, the '+' key</summary>
+        OEM_PLUS = 0xBB,
+
+        ///<summary>For any country/region, the ',' key</summary>
+        OEM_COMMA = 0xBC,
+
+        ///<summary>For any country/region, the '-' key</summary>
+        OEM_MINUS = 0xBD,
+
+        ///<summary>For any country/region, the '.' key</summary>
+        OEM_PERIOD = 0xBE,
+
+        ///<summary>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the '/?' key</summary>
+        OEM_2 = 0xBF,
+
+        ///<summary>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the '`~' key</summary>
+        OEM_3 = 0xC0,
+
+        ///<summary>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the '[{' key</summary>
+        OEM_4 = 0xDB,
+
+        ///<summary>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the '\|' key</summary>
+        OEM_5 = 0xDC,
+
+        ///<summary>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the ']}' key</summary>
+        OEM_6 = 0xDD,
+
+        ///<summary>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the 'single-quote/double-quote' key</summary>
+        OEM_7 = 0xDE,
+
+        ///<summary>Used for miscellaneous characters; it can vary by keyboard.</summary>
+        OEM_8 = 0xDF,
+
+        ///<summary>Either the angle bracket key or the backslash key on the RT 102-key keyboard</summary>
+        OEM_102 = 0xE2,
+
+        ///<summary>IME PROCESS key</summary>
+        PROCESSKEY = 0xE5,
+
+        ///<summary>Used to pass Unicode characters as if they were keystrokes. The PACKET key is the low word of a 32-bit Virtual Key value used for non-keyboard input methods. For more information, see Remark in KEYBDINPUT, SendInput, WM_KEYDOWN, and WM_KEYUP</summary>
+        PACKET = 0xE7,
+
+        ///<summary>Attn key</summary>
+        ATTN = 0xF6,
+
+        ///<summary>CrSel key</summary>
+        CRSEL = 0xF7,
+
+        ///<summary>ExSel key</
+        EXSEL = 0xF8,
+
+        ///<summary>Erase EOF key</summary>
+        EREOF = 0xF9,
+
+        ///<summary>Play key</summary>
+        PLAY = 0xFA,
+
+        ///<summary>Zoom key</summary>
+        ZOOM = 0xFB,
+
+        ///<summary>Reserved</summary>
+        NONAME = 0xFC,
+
+        ///<summary>PA1 key</summary>
+        PA1 = 0xFD,
+
+        ///<summary>Clear key</summary>
+        OEM_CLEAR = 0xFE
+
     }
 }
