@@ -1,6 +1,6 @@
 # ClickerApp
 
-Simple app to press virtual keys ([see](https://docs.microsoft.com/ru-ru/windows/desktop/inputdev/virtual-key-codes)) from javascript.
+Simple app to press virtual keys ([see](https://docs.microsoft.com/ru-ru/windows/desktop/inputdev/virtual-key-codes)) from javascript. Use Windows 2000 or later
 
 ### Use
 
