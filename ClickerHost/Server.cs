@@ -26,7 +26,14 @@ namespace ClickerHost
             {
                 var client = Listener.AcceptTcpClient();
 
-                taskFactory.StartNew(new RequestHandler(client).Run);
+                try
+                {
+                    taskFactory.StartNew(new RequestHandler(client).Run);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Client hapand!{Environment.NewLine}{ex.ToString()}");
+                }
             }
         }
         

@@ -24,19 +24,30 @@ namespace ClickerHost
 
             string httpRequest = GetRequest(stream);
 
-            if (string.IsNullOrEmpty(httpRequest))
+            if (!string.IsNullOrEmpty(httpRequest))
             {
                 Console.WriteLine(httpRequest);
 
                 int? keycode = GetKeyCode(httpRequest);
-                string responce = "error";
+                string response = "error";
 
-                string httpResponse = "HTTP/1.1 200 OK\nAccess-Control-Allow-Origin:*\nContent-type: text/html\nContent-Length:" + responce.Length.ToString() + "\n\n" + responce;
+                if (keycode.HasValue)
+                {
+                    var key = (Keys)keycode.Value;
+                    KeyboardSend.KeyDown(key);
+                    KeyboardSend.KeyUp(key);
+                    Console.WriteLine($"Success send key: {key.ToString()} ({(int)key})");
+                    response = "success";
+                }
+
+                string httpResponse = "HTTP/1.1 200 OK\nAccess-Control-Allow-Origin:*\nContent-type: text/html\nContent-Length:" + response.Length.ToString() + "\n\n" + response;
                 byte[] buffer = Encoding.ASCII.GetBytes(httpResponse);
                 stream.Write(buffer, 0, buffer.Length);
-                Console.WriteLine("Client send: " + responce);
-                _tcpClient.Close();
+                Console.WriteLine("Client send: " + response);
+                Console.WriteLine("===============================================================================");
+                Console.WriteLine();
             }
+            _tcpClient.Close();
         }
 
         private int? GetKeyCode(string httpRequest)
